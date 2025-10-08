@@ -1,132 +1,103 @@
-/* =====================================
-   COLORES INSTITUCIONALES UTL
-   ===================================== */
-:root {
-    --color-primario: #007a3d;   /* Verde institucional */
-    --color-secundario: #00b050; /* Verde brillante */
-    --color-texto: #222;
-    --color-fondo: #ffffff;      /* Blanco base */
-    --color-gris-claro: #f3f3f3;
-}
-
-/* =====================================
-   ESTILOS GENERALES
-   ===================================== */
+/* Estilos generales */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
 }
 
-/* =====================================
-   ENCABEZADO
-   ===================================== */
+/* Encabezado */
 .encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    background-color: var(--color-primario);
-    color: white;
-    text-align: center;
-}
-.logo {
-    width: 80px;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* =====================================
-   NAVEGACIÓN
-   ===================================== */
-nav {
-    background-color: var(--color-secundario);
-    padding: 10px 0;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    gap: 25px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: color 0.2s ease;
-}
-nav a:hover {
-    color: #eaffea;
-}
-
-/* =====================================
-   CONTENIDO PRINCIPAL
-   ===================================== */
-main {
-    padding: 30px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-section {
-    background: var(--color-gris-claro);
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    padding: 25px;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-section img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
-/* =====================================
-   PIE DE PÁGINA
-   ===================================== */
-footer {
-    background-color: var(--color-primario);
+    background-color: #006633; /* Verde institucional */
     color: white;
     text-align: center;
     padding: 20px 10px;
-    font-size: 0.9em;
 }
-footer a {
-    color: #b9ffd2;
+
+.logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* Menú de navegación */
+.menu {
+    background-color: #004d26;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
     text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    display: block;
 }
-footer a:hover {
-    text-decoration: underline;
+
+.menu a:hover {
+    background-color: #008040;
+    border-radius: 5px;
 }
 
-/* =====================================
-   RESPONSIVIDAD (para celular)
-   ===================================== */
-@media (max-width: 700px) {
-    .encabezado {
-        flex-direction: column;
-    }
+/* Secciones */
+.seccion {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+.seccion h2 {
+    color: #006633;
+    margin-bottom: 20px;
+}
 
-    section {
-        padding: 15px;
-    }
+.imagen-principal {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    h1, h2 {
-        text-align: center;
-    }
+/* Galería de talleres */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Pie de página */
+.pie {
+    background-color: #006633;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
 }
