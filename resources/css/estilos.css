@@ -1,0 +1,132 @@
+/* =====================================
+   COLORES INSTITUCIONALES UTL
+   ===================================== */
+:root {
+    --color-primario: #007a3d;   /* Verde institucional */
+    --color-secundario: #00b050; /* Verde brillante */
+    --color-texto: #222;
+    --color-fondo: #ffffff;      /* Blanco base */
+    --color-gris-claro: #f3f3f3;
+}
+
+/* =====================================
+   ESTILOS GENERALES
+   ===================================== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* =====================================
+   ENCABEZADO
+   ===================================== */
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+}
+.logo {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* =====================================
+   NAVEGACIÓN
+   ===================================== */
+nav {
+    background-color: var(--color-secundario);
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s ease;
+}
+nav a:hover {
+    color: #eaffea;
+}
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+   ===================================== */
+main {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+section {
+    background: var(--color-gris-claro);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+   ===================================== */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+footer a {
+    color: #b9ffd2;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVIDAD (para celular)
+   ===================================== */
+@media (max-width: 700px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+}
